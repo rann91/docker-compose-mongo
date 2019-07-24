@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  '4':
+    container_name: mongo-4
+    image: mongo:4.0
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:  
+      - ./data/4/db:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
