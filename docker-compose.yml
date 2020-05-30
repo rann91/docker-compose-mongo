@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 services:
   '4':
@@ -7,8 +7,9 @@ services:
     restart: always
     ports:
       - 27017:27017
-    volumes:  
+    volumes:
       - ./data/4/db:/data/db
+      - ./data/4/backup:/data/backup
     environment:
       - MONGO_INITDB_ROOT_USERNAME
       - MONGO_INITDB_ROOT_PASSWORD
